@@ -5,6 +5,7 @@ I began **CityAide** as a final project in [Harvard's CS50x](https://www.edx.org
 
 As renters in San Francisco, we were losing money that could be invested in a house – *"Our first home!"* we thought while trudging through numerous websites. My husband and I quickly agreed that a home can be renovated over time and shaped into a dream home, but a neighborhood? **A neighborhood is what it is**. The following snippets drove us to search for our ideal neighborhood:
 
+
 > My husband and I both need the internet for work – crappy internet is not an option.
 
 > After  you've bought your home, you can’t change the location of your grocery store or the school your kid(s) will attend. If only it were easier to reseach this *local* information from various cities using one website!
@@ -17,12 +18,14 @@ As renters in San Francisco, we were losing money that could be invested in a ho
 
 > What about entertainment, beaches, mountains and other details – and how great would it be if we could customize these details to our preferences?
 
+
 In many ways, the neighborhood is just as important, if not more, than buying the perfect home. There are great tools on the web, but to find all the data for *your needs* and *your lifestyle* can be lexhausting and inefficient. You're likely to end up in a realtor's office, crossing your fingers that you've found someone who will have your best interests in mind (over the strongly incentivizing dollar signs they will earn if you buy high . . . )
 
 
 ####Problems with existing websites
 
 * **Property, property, property**: there are great websites out there that provide home details – prices, home history, mortgage history and the like – they are a great place to start and end. What they lack is reliable information on the neighborhood – as the saying goes, “Not seeing the forest for the trees”. Upon further research, I found that much of the additional data was too vague, superficial and frequently inaccurate.
+
 * **(bad) data overload**: many websites try to fill the missing gap outlined above, but fail with over-cluttered data-overload -- often outdated or questionably reliable. Add to that a clunky interface and an inability to customize to your preferences and it's just a waste of time.
 
 
@@ -32,7 +35,9 @@ The more useful data you have relating to your needs and lifestyle, the better y
 ####CityAide Solution
 
 * **a clean and intuitive interface**: one a home-buyer or renter can quickly customize – results that fit your lifestyle. It might even be useful for real estate agents.
+
 * **transparent results**: Who collected the data? When? Where does it cover – state, city, county, etc? How accurate and reliable is the data and where can the user go for more information? 
+
 * **rank and save locations**: Want a home next to a hip street with great local restaurants or the perfect school? Write a note and rank high. Don’t want to live in a place next to a busy intersection or by a summer motorcycle camp? Write a note and rank low -- *unless you’re into motorcycles*. We often looked at homes that we liked, marked, and then changed our minds for important details. We quickly lost track of these mental notes and, I'm sure, put the same homes back on our list of viable homes.
 
 
@@ -51,7 +56,7 @@ The more useful data you have relating to your needs and lifestyle, the better y
 - [ ] **Incorporate more APIs**
   - [x]  Broadbandmap.gov
   - [ ]  Add GreatSchools API –still need the php proxy? 
-  - [ ]  note: I used Ben Alman’s [php proxy](http://benalman.com/projects/php-simple-proxy/) (Alman’s [GitHub Project](http://github.com/cowboy/php-simple-proxy)) to resolve a cross-domain issue that was blocking the API data during my course, but this *may* not be an issue now that I have a public domain.
+  - [ ]  note: I used Ben Alman’s [php proxy](http://benalman.com/projects/php-simple-proxy/) (Alman’s [GitHub Project Here](http://github.com/cowboy/php-simple-proxy)) to resolve a cross-domain issue that was blocking the API data during my course, but this *may* not be an issue now that I have a public domain.
 
 - [ ]  **Make panels disappear/invisible** when the user hasn’t selected them for results
 
