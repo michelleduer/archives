@@ -41,7 +41,7 @@ The more useful data you have relating to your needs and lifestyle, the better y
 * **rank and save locations**: Want a home next to a hip street with great local restaurants or the perfect school? Write a note and rank high. Don’t want to live in a place next to a busy intersection or by a summer motorcycle camp? Write a note and rank low -- *unless you’re into motorcycles*. We often looked at homes that we liked, marked, and then changed our minds for important details. We quickly lost track of these mental notes and, I'm sure, put the same homes back on our list of viable homes.
 
 
-####Current Status/Work
+####CityAide TODOs
 
 **Languages**: CSS3, Javascript, PHP, HTML5
 
@@ -71,7 +71,7 @@ The more useful data you have relating to your needs and lifestyle, the better y
 reminder: Maintain a consistent Bootstrap Grid System with new content!
 
 
-####Long-Term
+####CityAide Long-Term
 
 * Make personalized accounts an option using MySQL (MongoDB even better!)
 * When logged-in to personal account, allow the user to rank and save searches
