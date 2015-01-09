@@ -53,10 +53,6 @@ The more useful data you have relating to your needs and lifestyle, the better y
   - [ ]  Add GreatSchools API –still need the php proxy? 
   - [ ]  note: I used Ben Alman’s [php proxy](http://benalman.com/projects/php-simple-proxy/) (Alman’s [GitHub Project](http://github.com/cowboy/php-simple-proxy)) to resolve a cross-domain issue that was blocking the API data during my course, but this *may* not be an issue now that I have a public domain.
 
-
-
-####TODOs
-
 - [ ]  **Make panels disappear/invisible** when the user hasn’t selected them for results
 
 - [ ]  Reduce the **optional checkboxes** so that only the completed and available data will appear (i.e. many of the search options are not valid yet)
@@ -67,7 +63,7 @@ The more useful data you have relating to your needs and lifestyle, the better y
 
 - [ ]  add **more transparency** on broadband details – due credit to API, when was it collected? how frequently is it updated? what is the coverage considering the home? Same for other APIs. 
 
-note: Maintain a consistent Bootstrap Grid System
+reminder: Maintain a consistent Bootstrap Grid System with new content!
 
 
 ####Long-Term
