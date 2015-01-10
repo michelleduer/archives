@@ -1,0 +1,180 @@
+<div class="wide">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 form-container">
+                <form class="form-horizontal" role="form">
+                
+                    <!----search box---->
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <input id="address" type="text" class="form-control" placeholder="Address">
+                        </div>
+                        <div class="col-sm-2">
+                            <!-- Button trigger modal -->
+                            <button id="searchButton" type="button" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-lg" 
+                            value="Search" onclick="searchClicked()">Search</button>
+                        </div>
+                    </div>
+
+                    <!----categories---->
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkBroadband"><strong>Broadband Internet</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-3">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkSchools"><strong>School Ratings & Distances</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-0 col-sm-2">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkDemographics"><strong>Demographics</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1  col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkAir"><strong>Air Quality</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-1"> 
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkPrice"><strong>Home Price</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkClimate"><strong>Climate</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkGroceries"><strong>Grocery Stores</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkHiking"><strong>Hiking</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkHospitals"><strong>Hospitals</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-2">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkBiking"><strong>Bicycling Routes</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-2">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkEmployment"><strong>Employment Rates</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="checkHospitals"><strong>Crime Rates</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>     
+            </div><!----end col-sm-6 form-container---->
+        </div><!----end row---->
+    </div><!----end container-fluid---->
+</div><!----end wide---->
+
+<!--  Modal content for the above example -->
+<div id="resultsModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" onClick="window.location.reload()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myResults">Results</h4>
+            </div>
+            <div class="modal-body">
+                <!-----collapsible content (RESULTS) ----->
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-map">
+                                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#resultMap" aria-expanded="true" aria-controls="demo">
+                                Map 
+                                </button>
+                            </h4>
+                        </div>
+                        <div id="resultMap" class="collapse in">
+                            <div class="panel-body">
+                                <!----content----->
+                                <div class="row">
+                                    <!----map---->
+                                    <div id="map-canvas">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#result2" aria-expanded="true" aria-controls="demo">
+                                Results
+                                </button>
+                            </h4>
+                        </div>
+                        <div class="collapse in">
+                            <div class="panel-body" id="resultBroadband>
+                                <!----content----->
+                                Broadband Results
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#result3" aria-expanded="true" aria-controls="demo">
+                                Result3
+                                </button>
+                            </h4>
+                        </div>
+                        <div id="result3" class="collapse in">
+                            <div class="panel-body">
+                                <!----content----->test
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /collapsible content -->
+            </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
