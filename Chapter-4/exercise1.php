@@ -1,5 +1,3 @@
-<!---- in-progress: while the calculations for prime/composite work, the table is not displaying the composite numbers correctly and it has something to do with the loops ---->
-
 <!---- note: some formatting is copying a previous example in the book. If this were applied to a live webiste, I would
 separate out the languages in a much cleaner format---->
 
@@ -30,16 +28,12 @@ separate out the languages in a much cleaner format---->
 				
 		$i = '';
 		$j = '';
-		$n = '';
-		$m = '';
-		$num = '';
 		$even = false;
 		$odd = false;
-		$prime = false;
-		define("MAXIMUM_COUNT", 15);		// Constant for Highest Count Value
+		define("MAXIMUM_COUNT", 10);		// Constant for Highest Count Value
 
 		for ($i=1; $i <= MAXIMUM_COUNT; $i++) {
-			print $i . " ";
+			$prime = true;
 			// see if $num is even/odd
 			if ($i % 2 == 0) {
 				$even = true;
@@ -49,41 +43,20 @@ separate out the languages in a much cleaner format---->
 				$even = false;
 			}
 
-			$num = $i;
 			// see if $num is prime
-			if ($num == 2) {
+			if ($i == 2) {
 				$prime = true;
-				print "prime<br>";
-			} elseif ($num == 1 || $even == true) {
-				print "not prime<br>";
+			} elseif ($i == 1 || $even == true) {
 				$prime = false;
 			}  else {
 				// equation for checking if remaining numbers are prime
-				for ($j = 3; $j <= round(MAXIMUM_COUNT/2, 0); $j++) {
+				for ($j = 3; $j <= round($i/2, 0); $j+=2) {
 					
 					// all numbers will divide with themselves, so skip over
-					if ($j == $num) {
-						continue;
-					}
-					// Using the Sieve of Eratosthenes, if $i equals a multiple of $n * $j, it is not prime. 
-					// Also, only going to $n (and $j) <= round(MAXIMUM_COUNT/2, 0) since the counter goes to MAXIMUM_COUNT; 
-					// and this prevents redundant multiples from appearing
-					for ($n = 2; $n <= round(MAXIMUM_COUNT/2, 0); $n++) {
-						$m = $n * $j;
-						
-						// ignore $m greater than the highest value of $i
-						if ($m > MAXIMUM_COUNT || $m % 2 == 0) {
-							continue;
-						} elseif ($m == $num) {
-							echo "composite: num = $num, $n x $j = $m<br/>";
-							$prime = false;
-							$num++;
-						} else {
-							echo "prime: num = $num, $n x $j = $m<br/>";
-							$prime = true;
-						}
-							
-					}
+					if ($i % $j == 0) {
+						$prime = false;
+						break;
+					} 
 				}	
 			} 
 		?>
@@ -94,9 +67,9 @@ separate out the languages in a much cleaner format---->
 				<td><?php echo $i ?></td>
 				<td><?php 
 					if ($even == true) {
-						echo "EVEN [$prime]";
+						echo "EVEN";
 					} else {
-						echo "ODD [$prime]";
+						echo "ODD";
 					} 
 					?>
 				</td>
