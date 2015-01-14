@@ -1,4 +1,4 @@
-<!---- in-progress: while the calculations for prime/composite work, the table is not displaying the composite numbers correctly and I'm guessing it has to do with the fact that I'm following the author's formatting of intermixing html and php, ick!! ---->
+<!---- in-progress: while the calculations for prime/composite work, the table is not displaying the composite numbers correctly and it has something to do with the loops ---->
 
 <!---- note: some formatting is copying a previous example in the book. If this were applied to a live webiste, I would
 separate out the languages in a much cleaner format---->
@@ -39,7 +39,7 @@ separate out the languages in a much cleaner format---->
 		define("MAXIMUM_COUNT", 15);		// Constant for Highest Count Value
 
 		for ($i=1; $i <= MAXIMUM_COUNT; $i++) {
-			
+			print $i . " ";
 			// see if $num is even/odd
 			if ($i % 2 == 0) {
 				$even = true;
@@ -53,7 +53,9 @@ separate out the languages in a much cleaner format---->
 			// see if $num is prime
 			if ($num == 2) {
 				$prime = true;
+				print "prime<br>";
 			} elseif ($num == 1 || $even == true) {
+				print "not prime<br>";
 				$prime = false;
 			}  else {
 				// equation for checking if remaining numbers are prime
@@ -92,9 +94,9 @@ separate out the languages in a much cleaner format---->
 				<td><?php echo $i ?></td>
 				<td><?php 
 					if ($even == true) {
-						echo "EVEN";
+						echo "EVEN [$prime]";
 					} else {
-						echo "ODD";
+						echo "ODD [$prime]";
 					} 
 					?>
 				</td>
