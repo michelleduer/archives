@@ -13,21 +13,28 @@
 // a script that emulates the str_pad($myString, $desiredLength) function AND dispaly the original and padded string
 // i.e. take a string, add space chars to the right until string reaches desired length
 
-$originalText = "More padding -->";
+$originalText = "Give me PADDING.";
  
 $desiredLength = 40;
 $newText = '';
-$marker = 0;
+
+if (strlen($originalText >= $desiredLength)) {
+	$newText = $originalText;
+} else {
+	$padding = $desiredLength - strlen($originalText);
+	$newText = $originalText;
+}
+
 
 
 
 ?>
 		
 		<h2>Original Text:</h2>
-		<pre><?php echo $originalText ?></pre>
+		<pre><?php printf($originalText) ?></pre>
 
-		<h2>Padded Text:</h2>
-		<pre><?php echo $newText ?></pre>
+		<h2>Padded Text (note: highlight text to see padding):</h2>
+		<pre><?php printf("%-{$padding}s", "$newText") ?></pre>
 
 	</body>
 </html>
