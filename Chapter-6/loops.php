@@ -9,7 +9,7 @@ foreach($authors as $val) {
 
 
 
-// altering attays with foreach()
+// altering arrays with foreach()
 $authors = array("Steinbeck", "Kafka", "Tolkien", "Dickens");
 
 // $val only changes WITHIN the loop, the original value remains the same
