@@ -12,8 +12,8 @@
 
 <?php
 
-// write a function that takes an array argument and returns a string
-// return string in a definition list where each array key" = term, "value" = a definition for the term
+// write a function that takes an array argument and returns a string (I input 2 arrays in my function)
+// return string in a definition list (i.e. <dl><dd><dt>) where each array key" = term, "value" = a definition for the term
 // used a random list of words from http://www.vocabulary.com/lists/466436#view=notes
 
 $dictionary = array(
@@ -59,9 +59,12 @@ $dictionary = array(
 	),
 );
 
-// use function with key (word) to output definition of word
-$words = array("dinghy", "encapsulate", "iota");
 
+// find definitions for words in $words array
+$words = array("dinghy", "encapsulate", "iota", "lithe");
+
+
+// use function with key (word) to output definition of word
 defineWord($words, $dictionary);
 
 function defineWord($words, $dictionary) {
