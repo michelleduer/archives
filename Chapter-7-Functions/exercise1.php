@@ -2,18 +2,18 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<title>Dictionary</title>
+		<title>Definitions Function</title>
 		<link rel="stylesheet" type="text/css" href="common.css" />
 	</head>
 	<body>
-		<h1>Dictionary</h1>	
+		<h1>Definitions Function</h1>	
 		
 		<dl>
 
 <?php
 
-// write a function that takes an array argument and returns a string (I input 2 arrays in my function)
-// return string in a definition list (i.e. <dl><dd><dt>) where each array key" = term, "value" = a definition for the term
+// write a function that takes an array argument and returns a string
+// return string in a definition list where each array key" = term, "value" = a definition for the term
 // used a random list of words from http://www.vocabulary.com/lists/466436#view=notes
 
 $dictionary = array(
@@ -59,29 +59,23 @@ $dictionary = array(
 	),
 );
 
-
-// find definitions for words in $words array
+// use function with key (word) to output definition of word
 $words = array("dinghy", "encapsulate", "iota", "lithe");
 
+$selected_word = '';
+$definition = '';
 
-// use function with key (word) to output definition of word
-defineWord($words, $dictionary);
 
-function defineWord($words, $dictionary) {
-	$selected_word = '';
-	$definition = '';
-
-	foreach ($dictionary as $select) {
-		foreach ($words as $key => $word) {
-			if ($select["word"] == $word) {
-				$selected_word = $word;
-				$definition = $select["definition"];
+foreach ($dictionary as $select) {
+	foreach ($words as $key => $word) {
+		if ($select["word"] == $word) {
+			$selected_word = $word;
+			$definition = $select["definition"];
 ?>
-				<dt><dfn><?php echo $selected_word ?></dfn></dt>
-					<dd><?php echo $definition ?></dd>
+			<dt><dfn><?php echo $selected_word ?></dfn></dt>
+				<dd><?php echo $definition ?></dd>
 <?php
 
-			}
 		}
 	}
 }
