@@ -121,7 +121,6 @@ $obj->hello();
 echo "<br>";
 
 // alternatively:
-
 class MyClasses2 {
 	public function getGreeting() {
 		return "Hello, world!";
@@ -133,8 +132,67 @@ class MyClasses2 {
 
 $obj = new MyClasses2;
 $obj->hello();
+echo "<br>";
+
+// static methods
+class Vehicle {
+	public static function calcMpg($miles, $gallons) {
+		return ($miles/$gallons);
+	}
+}
+
+echo Vehicle::calcMpg(168, 6);
+echo "<br>";
 
 
+class MyClass7 {
+	const MYCONST = 123;
+	public static $staticVar = 456;
+
+	public function myMethod() {
+		echo "MYCONST = " . MyClass7::MYCONST . ", ";
+		echo "\$staticVar = " . MyClass7::$staticVar . "<br>";
+	}
+}
+
+$obj = new MyClass7;
+$obj->myMethod();
+
+
+class Car3 {
+	public static function calcMpg($miles, $gallons) {
+		return($miles/$gallons);	
+	}
+
+	public static function displayMpg($miles, $gallons) {
+		echo "This car's MPG is: " . self::calcMpg($miles, $gallons);
+	}
+}
+
+echo Car3::displayMpg(168, 6);
+echo "<br>";
+
+// using hints to check method arguments
+class Car4 {
+	public $color;
+}
+
+class Garage {
+	public function paint(/*HINT:*/ Car4 $car, $color) {
+		$car->color = $color;
+	}
+}
+
+$car = new Car4;
+$garage = new Garage;
+$car->color = "blue";
+$garage->paint($car, "green");
+echo $car->color;
+echo "<br>";
+
+$cat = "Lucky";
+$garage = new Garage;
+$garage->paint($cat, "red");	// Catchable fatal error details HINT
 
 
 ?>
