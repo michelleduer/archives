@@ -42,4 +42,71 @@ $car  = new Car;
 $x = $car->color;
 echo "The car's color is $x<br>";
 
+// three other overloading methods: __isset(), __unset(), __callStatic()
+class MyClass {
+	public function __isset($propertyName) {
+		// All properties beginning with "test" are "set"
+		return(substr($propertyName, 0, 4) == "test") ? true: false;
+	}
+}
+
+$testObject = new MyClass;
+echo isset($testObject->banana) . "<br>";
+echo isset($testObject->testBanana) . "<br>";
+
+
+class MyClass2 {
+	public function __unset($propertyName) {
+		echo "Unsetting property '$propertyName'<br>";
+	}
+}
+
+$testObject = new MyClass2;
+unset($testObject->banana);
+
+
+class MyClass3 {
+	public static function __callStatic($methodName, $arguments) {
+		echo "Static method '$methodName' called with the arguments:<br>";
+		foreach($arguments as $arg) {
+			echo "$arg<br>";
+		}
+	}
+}
+
+MyClass3::randomMethod("apple", "peach", "strawberry");
+
+
+// blocking inheritance and overrides with final classes and methods
+final class HandsOffThisClass {
+	public $someProperty = 123;
+	public function someMethod() {
+		echo "A method";
+	}
+}
+
+// generates error:
+/*
+class ChildClass extends HandsOffThisClass {
+}
+*/
+
+
+class ParentClass {
+	public $someProperty = 123;
+	public final function handsOffThisMethod() {
+		echo "A method";
+	}
+}
+
+// generates error:
+/*
+class ChildClass extends ParentClass {
+	public function handsOffThisMethod() {
+		echo "Trying to override the method";
+	}
+}
+*/
+
+
 ?>

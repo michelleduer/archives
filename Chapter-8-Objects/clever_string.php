@@ -38,7 +38,7 @@ echo "<p>The string is: " . $myString->getString() . "</p>";
 echo "<p>The length of the string is: " . $myString->strlen() . "</p>";
 echo "<p>The string in uppercase letters is: " . $myString->strtoupper() . "</p>";
 echo "<p>The letter 'e' occurs at position: " . $myString->strpos("e") . "</p>";
-$myString->madeUpMethod();
+$myString->madeUpMethod();	// Not among the $_allowedFunctions
 
 
 ?>
