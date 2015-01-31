@@ -13,7 +13,7 @@
 <?php
 
 if (isset($_POST["submitButton"])) {
-		processForm();
+	processForm();
 } else {
 	displayForm(array());
 }
