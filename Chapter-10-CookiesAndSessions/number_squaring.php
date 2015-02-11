@@ -53,4 +53,3 @@ for ($i = $start; $i <= $end; $i++) {
 		</table>
 	</body>
 </html>
-
