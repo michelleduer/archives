@@ -26,10 +26,9 @@ if (isset($_POST["number"])) {
 	$number = mt_rand(1,100);
 }
 
-$guess;
 if (isset($_POST["guessNumber"]) && $_POST["submitButton"] && $counter < 5) {
 	$guess = $_POST["guessNumber"];
-	echo "You guessed " . $guess . ". TESTING: the number to guess is " . $number . ". Counter = " . $counter . "<br>";
+	//echo "You guessed " . $guess . ". TESTING: the number to guess is " . $number . ". Counter = " . $counter . "<br>";
 	compareNumbers($guess, $number);
 
 } elseif ($counter == 5) {
