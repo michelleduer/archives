@@ -48,7 +48,7 @@ function displayFileList($message="") {
 			<div style="width: 20em;">
 				<label for="filename">Filename</label>
 				<div style="float:right; width:7%; margin-top:0.7em;"> .txt</div>
-				<input type="text" name="filename" id="filename" style="width:50%;" value="" />
+				<input type="text" name="filename" id="filename" style="width:40%;" value="" />
 				<div style="clear:both;">
 					<input type="submit" name="createFile" value="Create File" />
 				</div>
