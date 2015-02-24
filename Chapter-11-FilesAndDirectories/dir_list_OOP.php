@@ -2,17 +2,16 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<title>Listing Directory Contents</title>
+		<title>Listing Directory Contents Using Object-Oriented Programming</title>
 		<link rel="stylesheet" type="text/css" href="common.css" />
 	</head>
 	<body>
 
-		<h1>Listing Directory Contents</h1>
+		<h1>Listing Directory Contents Using Object-Oriented Programming</h1>
 <?php
 
 $dirPath = "sample_directory"; // Must add directory path here for code to work
-
-if (!($handle = opendir($dirPath))) die("Cannot open the directory.");
+$dir = dir($dirPath);
 
 ?>
 
@@ -21,13 +20,15 @@ if (!($handle = opendir($dirPath))) die("Cannot open the directory.");
 
 <?php
 
-while ($file = readdir($handle)) {
+while ($file = $dir->read()) {
 	if ($file != "." && $file != "..") echo "<li>$file</li>";
 }
 
-closedir($handle);
+$dir->close();
 
 ?>
+
 		</ul>
 	</body>
 </html>
+
