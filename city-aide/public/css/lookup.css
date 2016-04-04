@@ -1,0 +1,188 @@
+/**
+ * lookup.css
+ *
+ * CityAide
+ *
+ * Global stylesheet
+ */
+
+.navbar-default .navbar-brand {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: #ff9900;
+    font-size: 22px;
+}
+.nav.navbar-nav.navbar-right {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: #2dbb28;
+    font-size: 18px;
+}
+html, body {
+    font-family: "Helvetica", arial, sans-serif;
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+.wide {
+    width:100%;
+    background-position: 50% 18%;
+    background-image:url("/img/Chinook2000x1300.jpg");
+    background-size:cover;
+}
+.wide img {
+    width:100%;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.form-horizontal {
+    font-family: "Helvetica", arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fafafa;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);    
+    margin: 20px;
+    border: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+.map-container, .form-container {
+    padding-left:50px;
+    padding-right:50px;
+    position: relative;
+}
+.map-container {
+}
+.form-container {
+}
+.form-group {
+    padding: 10px;
+}
+.login-container, .register-container, .resetPassword-container, .error-container {
+    font-size: 16px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    padding-bottom: 20px;
+}
+.login-container {
+    color: #ff9900;
+}
+.register-container {
+    color: #ffffff;
+    background-color: rgba(225, 225, 225, 0.2);
+}
+.resetPassword-container {
+    color: white;
+    background-color: rgba(225, 225, 225, 0.2);
+}
+.error-container {
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+#searchButton, #loginButton, #registerButton, #resetButton {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+#resetPassword, #switchLogin, #switchBack {
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 1px 1px rgba(225,225,225,0.3);
+    text-align: center;
+    color: #ff9900;
+}
+#switchLogin, #switchBack {
+    font-weight: bold;
+}
+table, th, td{
+    padding: 5px;
+    border-collapse: collapse;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#balance {
+    text-align: center;
+    width: 20%;
+    background-color: #ceff82;
+}
+table#controls {
+    text-align: center;
+    width: 50%;
+}
+table#user {
+    text-align: center;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset{
+    margin-left: auto;
+    margin-right: auto;
+}        
+.panel-group {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel heading {
+    width: 100%;
+}
+.panel-heading button {
+    width: 100%;
+}
+.panel-heading button:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: #ffffff;
+}
+.panel-heading button.collapsed:after {
+    content:"\e080";
+}
+.panel-body, {
+    width: 100%;
+}
+hr {
+   display: block;
+   position: relative;
+   padding: 0;
+   margin: 8px auto;
+   height: 0;
+   width: 100%;
+   max-height: 0;
+   font-size: 1px;
+   line-height: 0;
+   clear: both;
+   border: none;
+   border-top: 1px solid #aaaaaa;
+   border-bottom: 1px solid #ffffff;
+}
+.chart {
+    height: 100%; 
+    width: 100%;
+}
+#myResults {
+    text-align: center;
+    color: #ff9900;
+}
+#map-canvas {
+    width: 100%;
+    height: 350px;
+    background: #aaa;
+    border: 1px solid #666;
+}
+.bottom {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bottom {
+    font-size: smaller;
+    text-align: center;
+    margin: 20px;
+}
